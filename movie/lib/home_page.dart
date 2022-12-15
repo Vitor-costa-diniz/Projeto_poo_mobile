@@ -26,7 +26,10 @@ class _HomePageState extends State<HomePage> {
   List movies = [];
   Future getMovie() async {
     const apiUrl =
-        'http://192.168.0.6:8080/api/movies?offset=0&limit=15&sort=ASC';
+        // ipconfig
+        // IPV4 Ex: 142.135.0.9
+        // Put that value where should be localhost 142.135.0.9:8080
+        'http://IPV4:8080/api/movies?offset=0&limit=15&sort=ASC';
 
     final http.Response response = await http.get(Uri.parse(apiUrl));
 
@@ -40,7 +43,10 @@ class _HomePageState extends State<HomePage> {
   List movieSuspense = [];
   Future getMovieSuspense() async {
     const apiUrl =
-        'http://192.168.0.6:8080/api/movies/findByGenre/2?offset=0&limit=25&sort=ASC';
+        // ipconfig
+        // IPV4 Ex: 142.135.0.9
+        // Put that value where should be localhost 142.135.0.9:8080
+        'http://IPV4:8080/api/movies?offset=0&limit=15&sort=ASC';
 
     final http.Response response = await http.get(Uri.parse(apiUrl));
 
@@ -54,7 +60,10 @@ class _HomePageState extends State<HomePage> {
   List movieTerror = [];
   Future getMovieTerror() async {
     const apiUrl =
-        'http://192.168.0.6:8080/api/movies/findByGenre/1?offset=0&limit=25&sort=ASC';
+        // ipconfig
+        // IPV4 Ex: 142.135.0.9
+        // Put that value where should be localhost 142.135.0.9:8080
+        'http://IPV4:8080/api/movies?offset=0&limit=15&sort=ASC';
 
     final http.Response response = await http.get(Uri.parse(apiUrl));
 
@@ -84,22 +93,22 @@ class _HomePageState extends State<HomePage> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Color(0xffA87FF3),
+            backgroundColor: const Color(0xffA87FF3),
             leading: Image.asset('images/Logo.png', scale: 1),
             actions: [
               Padding(
-                padding: EdgeInsets.only(top: 13, right: 20),
+                padding: const EdgeInsets.only(top: 13, right: 20),
                 child: Text(
                   'MovieDB',
                   style: GoogleFonts.poppins(
-                    color: Color(0xffFFFFFF),
+                    color: const Color(0xffFFFFFF),
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                padding: const EdgeInsets.only(right: 10, top: 10, bottom: 10),
                 height: MediaQuery.of(context).size.height * 0.042,
                 width: MediaQuery.of(context).size.width * 0.5,
                 child: TextField(
@@ -107,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                     print(txt);
                   },
                   keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     filled: true,
                     fillColor: Color(0xffE9DFFC),
                     prefixIcon: Icon(
@@ -126,7 +135,7 @@ class _HomePageState extends State<HomePage> {
               IconButton(
                 color: Colors.white,
                 iconSize: 30,
-                icon: Icon(Icons.menu_outlined),
+                icon: const Icon(Icons.menu_outlined),
                 onPressed: () {},
               ),
             ],
@@ -176,7 +185,7 @@ class _HomePageState extends State<HomePage> {
                               );
                             },
                           )
-                        : Center(
+                        : const Center(
                             child: CircularProgressIndicator(),
                           ),
                   ),
@@ -230,7 +239,7 @@ class _HomePageState extends State<HomePage> {
                               );
                             },
                           )
-                        : Center(
+                        : const Center(
                             child: CircularProgressIndicator(),
                           ),
                   ),
@@ -284,7 +293,7 @@ class _HomePageState extends State<HomePage> {
                               );
                             },
                           )
-                        : Center(
+                        : const Center(
                             child: CircularProgressIndicator(),
                           ),
                   ),

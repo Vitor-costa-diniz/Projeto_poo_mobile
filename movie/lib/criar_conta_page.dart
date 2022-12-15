@@ -12,133 +12,133 @@ class CriarConta extends StatefulWidget {
 class _CriarContaState extends State<CriarConta> {
   @override
   Widget build(BuildContext context) {
-    var _containerSize = MediaQuery.of(context).size.height * 0.05;
+    var containerSize = MediaQuery.of(context).size.height * 0.05;
     return Scaffold(
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xff28282c),
         ),
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(
             horizontal: 40,
-            vertical: _containerSize,
+            vertical: containerSize,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Text(
                 'Crie a sua conta',
                 style: GoogleFonts.poppins(
-                  textStyle: TextStyle(color: Color(0xffFFFFFF)),
+                  textStyle: const TextStyle(color: Color(0xffFFFFFF)),
                   fontSize: 29,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
                     'Email',
                     style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                         color: Color(0xffFFFFFF),
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   TextField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey,
-                      prefixIcon: Icon(Icons.email, color: Colors.white),
+                      prefixIcon: const Icon(Icons.email, color: Colors.white),
                       hintText: 'Digite seu email',
                       hintStyle: GoogleFonts.poppins(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                           color: Color(0xffFFFFFF),
                         ),
                       ),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   Text(
                     'Senha',
                     style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                         color: Color(0xffFFFFFF),
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   TextField(
                     obscureText: true,
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey,
-                      prefixIcon: Icon(Icons.lock, color: Colors.white),
+                      prefixIcon: const Icon(Icons.lock, color: Colors.white),
                       hintText: 'Digite sua senha',
                       hintStyle: GoogleFonts.poppins(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                           color: Color(0xffFFFFFF),
                         ),
                       ),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   Text(
                     'Confirmar Senha',
                     style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                         color: Color(0xffFFFFFF),
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   TextField(
                     obscureText: true,
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey,
-                      prefixIcon: Icon(Icons.lock, color: Colors.white),
+                      prefixIcon: const Icon(Icons.lock, color: Colors.white),
                       hintText: 'Confirmar senha',
                       hintStyle: GoogleFonts.poppins(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                           color: Color(0xffFFFFFF),
                         ),
                       ),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(height: 53),
+                  const SizedBox(height: 53),
                   Container(
-                    padding: EdgeInsets.only(left: 20, right: 20),
-                    width: _containerSize * 0.7,
+                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    width: containerSize * 0.7,
                     height: 50,
                     child: ElevatedButton(
                       onPressed: () {
@@ -147,20 +147,20 @@ class _CriarContaState extends State<CriarConta> {
                             MaterialPageRoute(
                                 builder: (context) => const HomePage()));
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xff64C661),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
                       child: Text(
                         'Criar Conta',
                         style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff64C661),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                     ),

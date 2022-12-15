@@ -22,60 +22,60 @@ class _LoginPageState extends State<LoginPage> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xff28282c),
         ),
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 40,
             vertical: 70,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Text(
                 'Login',
                 style: GoogleFonts.poppins(
-                  textStyle: TextStyle(color: Color(0xffFFFFFF)),
+                  textStyle: const TextStyle(color: Color(0xffFFFFFF)),
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
                     'Email',
                     style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                         color: Color(0xffFFFFFF),
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   TextField(
                     onChanged: (txt) {
                       _email = txt;
-                      print(_email);
+                      debugPrint(_email);
                     },
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey,
-                      prefixIcon: Icon(Icons.email, color: Colors.white),
+                      prefixIcon: const Icon(Icons.email, color: Colors.white),
                       hintText: 'Digite seu email',
                       hintStyle: GoogleFonts.poppins(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                           color: Color(0xffFFFFFF),
                         ),
                       ),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
@@ -84,39 +84,39 @@ class _LoginPageState extends State<LoginPage> {
                   )
                 ],
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
                     'Senha',
                     style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                         color: Color(0xffFFFFFF),
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   TextField(
                     onChanged: (txt) {
                       _senha = txt;
-                      print(_senha);
+                      debugPrint(_senha);
                     },
                     obscureText: true,
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey,
-                      prefixIcon: Icon(Icons.lock, color: Colors.white),
+                      prefixIcon: const Icon(Icons.lock, color: Colors.white),
                       hintText: 'Digite sua senha',
                       hintStyle: GoogleFonts.poppins(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                           color: Color(0xffFFFFFF),
                         ),
                       ),
-                      border: OutlineInputBorder(
+                      border: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         ),
@@ -125,31 +125,21 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text('Esqueceu a senha ?'),
-                    style: ButtonStyle(
+                    style: const ButtonStyle(
                       foregroundColor: MaterialStatePropertyAll(Colors.grey),
                       alignment: Alignment.topLeft,
                     ),
+                    child: const Text('Esqueceu a senha ?'),
                   ),
                 ],
               ),
               const SizedBox(height: 50),
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 0.7,
                 height: 48,
                 child: ElevatedButton(
-                  child: Text(
-                    'Continuar',
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xff64C661),
+                    backgroundColor: const Color(0xff64C661),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -161,21 +151,33 @@ class _LoginPageState extends State<LoginPage> {
                     if (_email == 'costavitor.8@hotmail.com' &&
                         _senha == 'senha') {
                       print('Acesso permitido');
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()));
                     }
                   },
+                  child: Text(
+                    'Continuar',
+                    style: GoogleFonts.poppins(
+                      textStyle: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              SizedBox(height: 5),
-              Container(
+              const SizedBox(height: 5),
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 0.64,
                 child: Row(
                   children: [
                     Text(
                       'Não tem uma conta ?',
                       style: GoogleFonts.poppins(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -186,7 +188,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Text(
                         'Registre-se',
                         style: GoogleFonts.poppins(
-                            textStyle: TextStyle(
+                            textStyle: const TextStyle(
                           color: Color(0xff925FF0),
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -199,7 +201,7 @@ class _LoginPageState extends State<LoginPage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: ((context) => CriarConta())));
+                                builder: ((context) => const CriarConta())));
                       },
                     )
                   ],
